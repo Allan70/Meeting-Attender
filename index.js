@@ -54,13 +54,13 @@ function launchClass(name, timeStart, endTime,setDay,link){
          
         if (timeOfficial == currentTime && setDay == currentDay){
             // send an alert or a text message reminding the user that they have a class in 15 minutes
-            alert('You are 15 mins early to ' + name);
+            console.log('You are 15 mins early to ' + name);
             googleLink(link);
         }else if(timeStart ==currentTime && setDay == currentDay){
-            alert('You are on time to ' + name);
+            console.log('You are on time to ' + name);
             googleLink(link);
         }else if(timeStart <= currentTime && setDay == currentDay){
-            alert('you are tardy to ' + name);
+            console.log('you are tardy to ' + name);
             googleLink(link);
         }else if(endTime == currentTime  && setDate == currentDay){
             console.log(name + ' class will be available on '+ day(setDay) + ' at ' + timeStart +'hrs to '+ endTime +'hrs');
