@@ -8,6 +8,7 @@ The time⌚ of start and time of end of meeting and the link to the meeting are 
 # Syntax 👨🏽‍💻👩🏽‍💻
 
 Meeting information should be entered in the multidimensional array using the following syntax.
+
 👾👾👾👾👾👾👾👾👾👾👾👾👾
 
 [   'Meeting Name'  ,  start-time-24hrs  ,  end-time-24hrs , day-integer ,  'http link'  ],
