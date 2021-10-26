@@ -10,7 +10,7 @@ The time⌚ of start and time of end of meeting and the link to the meeting are 
 Meeting information should be entered in the multidimensional array using the following syntax.
 👾👾👾👾👾👾👾👾👾👾👾👾👾
 
-[   'Meeting Name'  ,  start-time-24hrs  ,  end-time-24hrs , day-integer ,  'http link'],
+[   'Meeting Name'  ,  start-time-24hrs  ,  end-time-24hrs , day-integer ,  'http link'  ],
         
 Meeting Name: It is of type String. Here you can enter the name of your meeting.
 
@@ -33,7 +33,7 @@ Finally you are done! Repeat the process in the following dimensions of the arra
   # Deploy ✈🌏
   
 You can run the script in your html file.
-Allow popups for your html doc as it will redirect to your desired meeting links.
+Allow popups for your html doc page inthe browser as it will redirect to your desired meeting links in a separate tab in the browser.
   
 That is all, have fun😁.
 
