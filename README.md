@@ -5,7 +5,8 @@ This is a script that will automate attending virtual meetings 🎥.
 You have the option to assign a name to your meetings and the time that they would occur.
 The time⌚ of start and time of end of meeting and the link to the meeting are as well required.
 
-#Syntax
+# Syntax
+
 Meeting information should be entered in the multidimensional array using the following syntax.
 👾👾👾👾👾👾👾👾👾👾👾👾👾
         
