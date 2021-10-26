@@ -16,11 +16,15 @@ Meeting information should be entered in the multidimensional array using the fo
 Meeting Name: It is of type String. Here you can enter the name of your meeting.
 
 Start Time: <start-time-24hr-integer> The start time is of type int. You have to enter the time that your meeting would start. You will enter your values in a 24hour format but in interger form. example: 
+  
   800  (meaning 0800hrs)
+  
   2345 (meaning 2345hrs)
   
 End Time: <end-time-24hr-integer> The end time is of type int. You will to enter the time that your meeting would end. You will enter your values in a 24hour format but in interger form. example: 
+ 
   900  (meaning 0900hrs)
+  
   2135 (meaning 2135hrs)
  
 Day integer: <day-integer> Here you will enter the integer corresponding to the day of the week 
