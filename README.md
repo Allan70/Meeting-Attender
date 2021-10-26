@@ -5,12 +5,12 @@ This is a script that will automate attending virtual meetings 🎥.
 You have the option to assign a name to your meetings and the time that they would occur.
 The time⌚ of start and time of end of meeting and the link to the meeting are as well required.
 
-# Syntax
+# Syntax 👨🏽‍💻👩🏽‍💻
 
 Meeting information should be entered in the multidimensional array using the following syntax.
 👾👾👾👾👾👾👾👾👾👾👾👾👾
 
-['Class  1',0800,1000,1,'your http link'],
+[   'Meeting Name'  ,  start-time-24hrs  ,  end-time-24hrs , day-integer ,  'http link'],
         
 Meeting Name: It is of type String. Here you can enter the name of your meeting.
 
@@ -30,7 +30,7 @@ Link - The type is String. You will enter your meetings link at the value 'your_
   
 Finally you are done! Repeat the process in the following dimensions of the array entering other meetings that might be of interest.
 
-  # Deploy
+  # Deploy ✈🌏
   
 You can run the script in your html file.
 Allow popups for your html doc as it will redirect to your desired meeting links.
