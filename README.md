@@ -9,6 +9,8 @@ The time⌚ of start and time of end of meeting and the link to the meeting are 
 
 Meeting information should be entered in the multidimensional array using the following syntax.
 👾👾👾👾👾👾👾👾👾👾👾👾👾
+
+['Class  1',0800,1000,1,'your http link'],
         
 Meeting Name: It is of type String. Here you can enter the name of your meeting.
 
