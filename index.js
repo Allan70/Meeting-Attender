@@ -11,44 +11,47 @@ var meetingInfo = [
 ];
 
 //we will check whethe the meeting is available after every 15 seconds
+
 checker();
 
-//timer that refreshes the code after 15 seconds 15000 milliseconds
-function checker() {setInterval(loadclass, 15000);}
-
+//timer that refreshes the code after 60 seconds 60000
+function checker() {
+    setTimeout(loadclass, 15000);
+}
 
 //function that loads info into the launching class
 function loadclass(){
-for(let i = 0; i < meetingInfo.length; i++){
+for(let i = 0; i < classInfo.length; i++){
    //function that launches the meeting
-   launchClass(meetingInfo[i][0],meetingInfo[i][1],meetingInfo[i][2],meetingInfo[i][3], meetingInfo[i][4]); 
+   launchClass(classInfo[i][0],classInfo[i][1],classInfo[i][2],classInfo[i][3], classInfo[i][4]); 
 }
 
 }
 
+//
 function day(num){
           
    var buck;
    if(num = 1){
      buck = 'Monday';
    }else if(num = 2){
-       buck = 'Tuesday';
+     buck = 'Tuesday';
    }else if(num =3){
-       buck = 'Wednesday';
+     buck = 'Wednesday';
    }else if(num = 4){
-       buck = 'Thursday';
+     buck = 'Thursday';
    }else if(num = 5){
-       buck = 'Friday';
+     buck = 'Friday';
    }else if(num = 6){
-       buck = 'Saturday';
+     buck = 'Saturday';
    }else if(num =7 ){
-       buck = 'Sunday';
+     buck = 'Sunday';
    }
 
    return buck;
 }
 
-
+// 
 function launchClass(name, timeStart, endTime,setDay, link){
     
    // function to execute class when its 15 minutes before time
@@ -56,58 +59,56 @@ function launchClass(name, timeStart, endTime,setDay, link){
        // nowTime = current Time
        
 function eggTimer(endTime, currentTime){
-   var egg = endTime - currentTime;
-   var sec;
+       var egg = endTime - currentTime;
+       var mSec;
    // convert egg time to milliseconds
-   if(egg < 60){
-      sec = egg * 60 * 1000;
-   }else{
        var minutes = egg % 100;
-       var quotient = egg/100;
-       var hour = Math.round(quotient);
-       sec = (hour*60*60) + (minutes*60);
-       sec *= 1000;
+       var hour = Math.round(egg/100);
+       mSec = ((hour*60*60) + (minutes*60))*1000;
       
-   }
-   return sec;
+    
+   return mSec;
 } 
 
        const currentDate = new Date();
        const currentDay = currentDate.getDay();
        const currentTime = (currentDate.getHours()*100) + currentDate.getMinutes();
+       const now = currentTime;
        var timeOfficial = timeStart - 15;
        var inClass = false;
         
-       if (timeOfficial == currentTime && setDay == currentDay){
+       if ((timeOfficial == currentTime && setDay == currentDay)&&(timeOfficial <= currentTime && setDay == currentDay)){
            // send an    console.log or a text message reminding the user that they have a class in 15 minutes
            console.log('You are 15 mins early to ' + name);
-           inClass = true;
-
-           googleLink(link);
+           googleLink(link,checker,endTime, now);
+           
 
        }else if((timeStart == currentTime && setDay == currentDay)&&(timeStart <= currentTime && setDay == currentDay)){
            console.log('You are on time to ' + name);
-           inClass = true;
-           googleLink(link);
+           googleLink(link,checker,endTime, now);
+           
 
        }else if((endTime >= currentTime  && setDay == currentDay)&&(timeStart <= currentTime  && setDay == currentDay)){
            console.log('you are late to '+ name);
-           inClass = true;
-           googleLink(link);
-           // begin the timer once the class has finished
+           googleLink(link,checker,endTime, now);
+           
+           // begin the timer once the class has started
           
 
        }else if(endTime == currentTime  && setDay == currentDay){
-           console.log(name + ' class will be available on '+ day(setDay) + ' at ' + timeStart +'hrs to '+ endTime +'hrs');
+           console.log(name + ' meeting will be available on '+ day(setDay) + ' at ' + timeStart +'hrs to '+ endTime +'hrs');
+           checker;
        }else{
-           console.log(name + ' class will be available on '+ day(setDay) + ' at ' + timeStart +'hrs to '+ endTime+'hrs');
+           console.log(name + ' meeting will be available on '+ day(setDay) + ' at ' + timeStart +'hrs to '+ endTime+'hrs');
+           checker;
        }
 
-       inClass ? setTimeout(checker,eggTimer(endTime,currentTime)) : checker;
+       // inClass ? setTimeout(checker,eggTimer(endTime,currentTime)) : checker;
    
 
-   function googleLink(link){
+   function googleLink(link, checker,endTime, now){
        // a finction to execute a google link
        window.open(link, '_blank');
+       setTimeout(checker,eggTimer(endTime,now));
    }
 }
