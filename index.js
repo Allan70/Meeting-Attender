@@ -31,32 +31,30 @@ for(let i = 0; i < classInfo.length; i++){
 //
 function day(num){
           
-   var buck;
+   var dayOfWeek;
    if(num = 1){
-     buck = 'Monday';
+     dayOfWeek = 'Monday';
    }else if(num = 2){
-     buck = 'Tuesday';
+     dayOfWeek = 'Tuesday';
    }else if(num =3){
-     buck = 'Wednesday';
+     dayOfWeek = 'Wednesday';
    }else if(num = 4){
-     buck = 'Thursday';
+     dayOfWeek = 'Thursday';
    }else if(num = 5){
-     buck = 'Friday';
+     dayOfWeek = 'Friday';
    }else if(num = 6){
-     buck = 'Saturday';
+     dayOfWeek = 'Saturday';
    }else if(num =7 ){
-     buck = 'Sunday';
+     dayOfWeek = 'Sunday';
    }
 
-   return buck;
+   return dayOfWeek;
 }
 
 // 
 function launchClass(name, timeStart, endTime,setDay, link){
     
    // function to execute class when its 15 minutes before time
-       // nowDay = currentDay
-       // nowTime = current Time
        
 function eggTimer(endTime, currentTime){
        var egg = endTime - currentTime;
